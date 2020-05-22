@@ -1,0 +1,32 @@
+ifdef::env-github[]
+image:https://img.shields.io/gem/v/geolexica-site?style=for-the-badge[
+	Latest Version, link="https://rubygems.org/gems/geolexica-site"]
+endif::[]
+
+== Version policy for this gem
+
+MAJOR version bump:: Jekyll version bump; upgrade must be conducted
+  with care.
+MINOR version bump:: dependencies updated, typically adds new features,
+  may introduce less tedious breaking changes; upgrade must be conducted
+  with care.
+PATCH version bump:: dependencies updated, but should not affect semantics of
+  generated sites.
+
+== Major versions described
+
+[cols="h,1",options="autowidth,noheader"]
+|====
+| 0.x | Jekyll 3, for legacy sites.
+
+| 1.x | Jekyll 4.
+|====
+
+== Credits
+
+This gem is developed, maintained and funded by
+https://www.ribose.com[Ribose Inc.]
+
+== License
+
+This gem is licensed under MIT license.
