@@ -29,14 +29,14 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
   # Major dependencies.
-  spec.add_runtime_dependency "jekyll", "~> 3.8.7"
+  spec.add_runtime_dependency "jekyll", "~> 4.0.1"
   spec.add_runtime_dependency "jekyll-geolexica", "~> 1.0.0"
 
   # Most useful Jekyll plugins.
   spec.add_runtime_dependency "jekyll-asciidoc", "~> 3.0.0"
   spec.add_runtime_dependency "jekyll-tidy-json", "~> 1.2.0"
-  spec.add_runtime_dependency "jekyll-plugin-frontend-build", "= 0.0.2"
-  spec.add_runtime_dependency "jekyll-theme-isotc211-helpers", "~> 0.5.4"
+  spec.add_runtime_dependency "jekyll-plugin-frontend-build", "~> 0.0.3"
+  spec.add_runtime_dependency "jekyll-theme-isotc211-helpers", "~> 0.6.0"
 
   # These are less important gems.  Freezing them is probably a good idea.
   spec.add_runtime_dependency "jekyll-data", "= 1.1.0"
