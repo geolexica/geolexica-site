@@ -35,7 +35,7 @@ Gem::Specification.new do |spec|
   # Most useful Jekyll plugins.
   spec.add_runtime_dependency "jekyll-asciidoc", "~> 3.0.0"
   spec.add_runtime_dependency "jekyll-tidy-json", "~> 1.2.0"
-  spec.add_runtime_dependency "jekyll-plugin-frontend-build", "~> 0.0.2"
+  spec.add_runtime_dependency "jekyll-plugin-frontend-build", "= 0.0.2"
   spec.add_runtime_dependency "jekyll-theme-isotc211-helpers", "~> 0.5.4"
 
   # These are less important gems.  Freezing them is probably a good idea.
