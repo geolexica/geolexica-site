@@ -54,6 +54,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "wdm", "> 0"
 
   # Useful in development.
-  spec.add_runtime_dependency "pry", "~> 0.13.1"
+  spec.add_runtime_dependency "pry", "~> 0.14.0"
   spec.add_runtime_dependency "pry-doc", "~> 1.1.0"
 end
