@@ -40,7 +40,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "liquid-pry", "~> 1.0"
 
   # These are less important gems.  Freezing them is probably a good idea.
-  spec.add_runtime_dependency "jekyll-data", "= 1.1.0"
+  spec.add_runtime_dependency "jekyll-data", "= 1.1.1"
   spec.add_runtime_dependency "jekyll-feed", "= 0.15"
   spec.add_runtime_dependency "jekyll-sitemap", "= 1.4.0"
 
