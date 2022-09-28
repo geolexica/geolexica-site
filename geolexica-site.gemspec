@@ -30,7 +30,8 @@ Gem::Specification.new do |spec|
 
   # Major dependencies.
   spec.add_runtime_dependency "jekyll", "~> 4.2.0"
-  spec.add_runtime_dependency "jekyll-geolexica", "~> 1.7.0"
+  spec.add_runtime_dependency "jekyll-geolexica", "~> 1.8.0"
+  spec.add_runtime_dependency "geolexica-server", "~> 0.0.0"
 
   # Most useful Jekyll plugins.
   spec.add_runtime_dependency "jekyll-asciidoc", "~> 3.0.0"
