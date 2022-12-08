@@ -3,7 +3,18 @@ image:https://img.shields.io/gem/v/geolexica-site?style=for-the-badge[
 	Latest Version, link="https://rubygems.org/gems/geolexica-site"]
 endif::[]
 
-== Version policy for this gem
+= Geolexica Site gem
+
+== Purpose
+
+The `geolexica-site` gem is used as a manifest to pull in all the necessary
+gems for a Geolexica site and have them version bound, mainly:
+
+* https://github.com/geolexica/geolexica-server[`geolexica-server`]
+* https://github.com/geolexica/jekyll-geolexica[`jekyll-geolexica`]
+
+
+== Version policy
 
 MAJOR version bump:: Jekyll version bump; upgrade must be conducted
   with care.
