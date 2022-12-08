@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 # (c) Copyright 2020 Ribose Inc.
 #
 
-require_relative "lib/geolexica-site/version.rb"
+require_relative "lib/geolexica/site/version"
 
 all_files_in_git = Dir.chdir(__dir__) { `git ls-files -z`.split("\x0") }
 
@@ -9,35 +11,36 @@ ribose_url = "https://open.ribose.com/"
 github_url = "https://github.com/geolexica/geolexica-site"
 
 Gem::Specification.new do |spec|
-  spec.name          = "geolexica-site"
-  spec.version       = GeolexicaSite::VERSION
-  spec.authors       = ["Ribose Inc."]
-  spec.email         = ["open.source@ribose.com"]
+  spec.name = "geolexica-site"
+  spec.version = Geolexica::Site::VERSION
+  spec.authors = ["Ribose Inc."]
+  spec.email = ["open.source@ribose.com"]
 
-  spec.summary       = "Geolexica sites generator based on Jekyll"
-  spec.homepage      = ribose_url
-  spec.license       = "MIT"
+  spec.summary = "Geolexica sites generator based on Jekyll"
+  spec.homepage = ribose_url
+  spec.license = "MIT"
+  spec.required_ruby_version = ">= 2.6.0"
 
-  spec.metadata      = {
-    "homepage_uri"      => ribose_url,
-    "source_code_uri"   => github_url,
+  spec.metadata = {
+    "homepage_uri" => ribose_url,
+    "source_code_uri" => github_url
   }
 
-  spec.files         = all_files_in_git
+  spec.files = all_files_in_git
 
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.bindir = "exe"
+  spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
   # Major dependencies.
+  spec.add_runtime_dependency "geolexica-server", "~> 0.0.0"
   spec.add_runtime_dependency "jekyll", "~> 4.2.0"
   spec.add_runtime_dependency "jekyll-geolexica", "~> 1.8.3"
-  spec.add_runtime_dependency "geolexica-server", "~> 0.0.0"
 
   # Most useful Jekyll plugins.
   spec.add_runtime_dependency "jekyll-asciidoc", "~> 3.0.0"
-  spec.add_runtime_dependency "jekyll-tidy-json", "~> 1.2.0"
   spec.add_runtime_dependency "jekyll-plugin-frontend-build", "~> 0.0.3"
   spec.add_runtime_dependency "jekyll-theme-isotc211-helpers", "~> 0.6.0"
+  spec.add_runtime_dependency "jekyll-tidy-json", "~> 1.2.0"
   spec.add_runtime_dependency "liquid-pry", "~> 1.0"
 
   # These are less important gems.  Freezing them is probably a good idea.
@@ -47,8 +50,8 @@ Gem::Specification.new do |spec|
 
   # These gems are indirectly but widely used throughout the project,
   # therefore adding some version constraints is a good idea.
-  spec.add_runtime_dependency "liquid", "~> 4.0.3"
   spec.add_runtime_dependency "asciidoctor", "~> 2.0"
+  spec.add_runtime_dependency "liquid", "~> 4.0.3"
 
   # Helpful on Windows
   spec.add_runtime_dependency "tzinfo", "~> 2.0"
